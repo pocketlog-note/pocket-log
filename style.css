@@ -19,9 +19,6 @@ img{max-width:100%}
 header.site{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
 .logo{font-weight:800;font-size:1.15rem;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:.4rem}
-.logo .mark{width:30px;height:30px;border-radius:8px}
-footer .logo-s{display:flex;align-items:center;gap:.4rem}
-footer .logo-s .mark{width:20px;height:20px;border-radius:6px}
 header nav a{color:var(--muted);text-decoration:none;font-size:.9rem}
 footer.site{margin-top:4rem;padding:2rem 0 3rem;background:var(--surface);border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;line-height:1.8}
 footer .logo-s{font-weight:700;color:var(--text);margin:0}
@@ -67,7 +64,7 @@ mark.todo{background:#ffd5d5;color:#8a1c1c;padding:.1rem .3rem;border-radius:4px
 .toc ol{margin:0;padding-left:1.3rem;font-size:.92rem}
 .toc a{color:var(--text)}
 .author{display:flex;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;margin:3rem 0 0}
-.author .avatar{width:3.4rem;height:3.4rem;flex:none;border-radius:50%}
+.author .avatar{font-size:1.4rem;font-weight:800;color:var(--accent);width:3.4rem;height:3.4rem;flex:none;display:grid;place-items:center;background:var(--accent-soft);border-radius:50%}
 .author p{margin:0;font-size:.88rem;color:var(--muted);line-height:1.7}
 .author .name{font-weight:700;color:var(--text);font-size:.95rem}
 .related h2{font-size:1rem;color:var(--muted);margin:2.5rem 0 1rem}
