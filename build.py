@@ -227,7 +227,8 @@ def main():
     if OUT.exists():
         shutil.rmtree(OUT)
     (OUT / "posts").mkdir(parents=True)
-    shutil.copy(ROOT / "style.css", OUT / "style.css")    (OUT / ".nojekyll").write_text("", encoding="utf-8")
+    shutil.copy(ROOT / "style.css", OUT / "style.css")
+    (OUT / ".nojekyll").write_text("", encoding="utf-8")
 
     posts = []
     for path in sorted(POSTS_SRC.glob("*.md")):
