@@ -11,3 +11,6 @@ build/
 .DS_Store
 Thumbs.db
 .claude/settings.local.json
+
+# ビルド成果物（GitHub Actions が作って公開する）
+docs/
