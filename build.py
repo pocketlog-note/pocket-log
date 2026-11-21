@@ -44,7 +44,7 @@ def parse(path):
 def inline(s):
     s = html.escape(s)
     s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
-    s = re.sub(r"\[(.+?)\]\((https?://[^)\s]+)\)", r'<a href="\2" rel="noopener">\1</a>', s)
+    s = re.sub(r"\[(.+?)\]\((https?://[^)\s]+|[\w./-]+\.html)\)", r'<a href="\2" rel="noopener">\1</a>', s)
     return s
 
 
