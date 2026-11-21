@@ -178,16 +178,16 @@ def layout(*, title, desc, inner, prefix, url, og_type="website", full_title=Non
 <meta property="og:site_name" content="{SITE_NAME}">
 <meta name="twitter:card" content="summary">
 <link rel="alternate" type="application/rss+xml" title="{SITE_NAME}" href="{prefix}feed.xml">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👛</text></svg>">
+<link rel="icon" type="image/svg+xml" href="{prefix}logo.svg">
 <link rel="stylesheet" href="{prefix}style.css"></head>
 <body>
 <header class="site"><div class="wrap">
-<a class="logo" href="{prefix}index.html"><span class="mark">👛</span>{SITE_NAME}</a>
+<a class="logo" href="{prefix}index.html"><img class="mark" src="{prefix}logo.svg" alt="" width="30" height="30">{SITE_NAME}</a>
 <nav><a href="{prefix}about.html">運営者</a></nav>
 </div></header>
 <main class="wrap">{inner}</main>
 <footer class="site"><div class="wrap">
-<p class="logo-s">👛 {SITE_NAME}</p><p>{SITE_TAGLINE}</p>
+<p class="logo-s"><img class="mark" src="{prefix}logo.svg" alt="" width="20" height="20"> {SITE_NAME}</p><p>{SITE_TAGLINE}</p>
 <nav><a href="{prefix}about.html">運営者情報</a><a href="{prefix}privacy.html">プライバシーポリシー・免責事項</a><a href="{prefix}contact.html">お問い合わせ</a><a href="{prefix}feed.xml">RSS</a></nav>
 <p class="small">© {datetime.now(JST).year} {SITE_NAME}</p>
 </div></footer>
@@ -218,7 +218,7 @@ def build_post(p, all_posts):
 <h1>{esc(p["title"])}</h1>{pr}{toc}
 <div class="content">{p["html"]}</div>
 </article>
-<aside class="author"><span class="avatar">👛</span><div><p class="name">{AUTHOR}</p><p>{AUTHOR_BIO}</p></div></aside>
+<aside class="author"><img class="avatar" src="../logo.svg" alt="" width="54" height="54"><div><p class="name">{AUTHOR}</p><p>{AUTHOR_BIO}</p></div></aside>
 {related}"""
     return layout(title=p["title"], desc=p["desc"], inner=inner, prefix="../",
                   url=f"{SITE_URL}/posts/{p['slug']}.html", og_type="article")
@@ -229,6 +229,7 @@ def main():
         shutil.rmtree(OUT)
     (OUT / "posts").mkdir(parents=True)
     shutil.copy(ROOT / "style.css", OUT / "style.css")
+    shutil.copy(ROOT / "logo.svg", OUT / "logo.svg")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
 
     posts = []

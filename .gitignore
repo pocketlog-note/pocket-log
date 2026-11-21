@@ -14,3 +14,7 @@ Thumbs.db
 
 # ビルド成果物（GitHub Actions が作って公開する）
 docs/
+
+_work/
+
+.yomiyasu/
