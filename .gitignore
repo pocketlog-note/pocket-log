@@ -18,3 +18,8 @@ docs/
 _work/
 
 .yomiyasu/
+
+# 運用メモ・ネタ帳（公開しない。ローカルだけに置く）
+CLAUDE.md
+plan/
+topics.txt
